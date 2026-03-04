@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "functions": {
+    "api/convert.py": {
+      "maxDuration": 180,
+      "memory": 1024,
+      "runtime": "python3.9"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/convert.py",
+      "methods": ["GET", "POST", "OPTIONS"]
+    }
+  ]
+}
